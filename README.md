@@ -14,11 +14,7 @@ This project is focused on building a sentiment analysis model for restaurant re
 - **`templates/`**: Contains the HTML template for the web interface.
 - **`static/`**: Contains static files like JavaScript and CSS.
 
-## How to Use
-Clone the repository:
-   ```
-   git clone https://github.com/<your-username>/<your-repo-name>.git
-   ```
+
 ## How to Clone and Run the Project
 
 1. **Clone the Repository**:
