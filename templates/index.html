@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Sentiment Analysis Model</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Link to static CSS file -->
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='styles.css') }}"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="predict">
+			<h1>Predict Sentiments</h1>
+			<form action="/predict" method="POST">
+				<h2 class="input">Enter your review:</h2>
+				<textarea
+					type="text"
+					id="review"
+					name="review"
+					rows="4"
+					placeholder="Write your review here..."
+					required="required"
+				></textarea>
+				<br /><br />
+				<button type="submit">Predict</button>
+			</form>
+		</div>
+		<br />
+		<br />
+		{% if prediction_text %}
+		<h2 class="predicted_sentiment">{{ prediction_text }}</h2>
+		<p><strong>Original Review:</strong> {{ original_review }}</p>
+		{% else %}
+		<h2 class="predicted_sentiment" style="display: none"></h2>
+		{% endif %}
+
+		<script src="index.js"></script>
+	</body>
+</html>
