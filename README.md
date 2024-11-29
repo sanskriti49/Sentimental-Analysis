@@ -19,8 +19,18 @@ This project is focused on building a sentiment analysis model for restaurant re
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/Sentiment-Analysis.git
+   git clone https://github.com/sanskriti49/Sentiment-Analysis.git
    cd Sentiment-Analysis
+
+2. **Set Up Python Environment**
+   ```bash
+   python3 -m venv venv
+  ```venv\Scripts\activate```
+  
+3. **Install Dependencies from requirements.txt:**
+  ```bash
+  pip install -r requirements.txt
+```
    
 ## Running the project
 
