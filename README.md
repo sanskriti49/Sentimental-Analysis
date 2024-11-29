@@ -1,9 +1,9 @@
 # Sentiment Analysis Project
 
-## Overview
+## Overview-
 This project implements a text classification machine learning model that analyses the customer's sentiments based on their reviews about a restaurant.  The dataset is preprocessed, cleaned, and used to train a Naive Bayes classifier to classify reviews as either Positive or Negative.
 
-##Project Structure
+## Project Structure-
 This project is focused on building a sentiment analysis model for restaurant reviews. It consists of the following major components:
 
 - **`model.py`**: Code to train the sentiment analysis model. It uses a dataset of restaurant reviews and saves the trained model (`model.pkl`) and the CountVectorizer (`cv-model.pkl`).
@@ -15,7 +15,7 @@ This project is focused on building a sentiment analysis model for restaurant re
 - **`static/`**: Contains static files like JavaScript and CSS.
 
 
-## How to Clone and Run the Project
+## How to Clone and Run the Project-
 
 1. **Clone the Repository**:
    ```bash
@@ -32,15 +32,14 @@ This project is focused on building a sentiment analysis model for restaurant re
      pip install -r requirements.txt
 ```
 
-## Running the project
+## Running the project-
 
 Ensure that you are in the project home directory. Create the machine learning model by running below command -
-python model.py
+```python model.py```
 This would create a serialized version of our model into a file model.pkl
 
 Run app.py using below command to start Flask API
 ```python app.py```
-
 By default, flask will run on port 5000. Navigate to url http://localhost:5000
 
 ## Model Training
