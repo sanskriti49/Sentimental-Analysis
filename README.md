@@ -24,14 +24,14 @@ This project is focused on building a sentiment analysis model for restaurant re
 
 2. **Set Up Python Environment**
    ```bash
-   python3 -m venv venv
-  ```venv\Scripts\activate```
+    python3 -m venv venv
+    venv\Scripts\activate
   
 3. **Install Dependencies from requirements.txt:**
   ```bash
-  pip install -r requirements.txt
+     pip install -r requirements.txt
 ```
-   
+
 ## Running the project
 
 Ensure that you are in the project home directory. Create the machine learning model by running below command -
