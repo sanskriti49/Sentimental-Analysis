@@ -14,7 +14,7 @@ url = "https://raw.githubusercontent.com/sanskriti49/Sentimental-Analysis/refs/h
 df = pd.read_csv(url, encoding="ISO-8859-1")
 df = df.drop(columns=["Restaurant","Reviewer","Metadata","Time","Pictures"])
 
-# tokenizing and cleaning cata
+# tokenizing, cleaning and stemming data
 y = df["Rating"]
 X = df.drop(columns=["Rating"])
 y = y.replace({'Like':3})
@@ -31,7 +31,6 @@ for i in range(0,len(y)):
     else:
         y[i] = "Negative"
 
-# Stemming
 ps = PorterStemmer()
 corpus = []
 for i in range(0, len(X)):
@@ -39,7 +38,7 @@ for i in range(0, len(X)):
     review = review.lower()
     review = review.split()
 
-    review = [ps.stem(word) for word in review if not word in stopwords.words('english')]
+    review = [ps.stem(word) for word in review if not word in stopwords.words('english')] #stemming
     review = ' '.join(review)
     corpus.append(review)
 
